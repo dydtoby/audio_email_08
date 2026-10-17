@@ -1,0 +1,111 @@
+================================================================================
+示例：按给定 JSON（uid 2330 技术规格邮件）当前代码会朗读哪些内容
+================================================================================
+依据仓库当前实现（约 2026-05）：
+  - Flask TTS：src/tts/tts.py  → build_text()
+  - Electron 读信前缀/后缀：src/renderer/pages/EmailView/EmailView.jsx
+    → buildReadAlongFromPipelineEmailData()（与 useEmailVoice 中逻辑一致）
+
+以下 JSON 字段不会朗读：images（整段忽略）、number_of_detected_links、
+number_of_detected_images、uid、links 中带 data: 的整条（不读 base64）。
+
+================================================================================
+一、Flask TTS（POST /speak 等使用的 build_text 拼接结果）
+================================================================================
+说明：header 中 sender / subject / date 各占一行（换行连接），然后空一行再接 body；
+     附件与链接段落用英文逗号+空格连接多条。
+
+--- 全文如下（可直接当作 TTS 输入稿）---
+
+sender is jane.doe@example.com
+subject is Technical Specification Update
+sent on Sunday, May 3, 2026
+
+the content is Hi Team,
+
+Please find the updated technical specifications for the upcoming sprint. I have included the detailed PDF with all the necessary architectural diagrams.
+
+You can also track our progress on the official Sprint Dashboard.
+
+Regards,
+Jane
+
+Attachments: attachment type is document and attachment is Sprint Specs, number of detected links is 2 and number of detected images is 0
+
+Links: link is Sprint Dashboard
+
+--- 说明 ---
+• 本例无 receiver，故无该行。
+• date 已是 “sent on …”，不再加 “Date ” 前缀。
+• links[0] 无 spoken_name，用 text/label 得到 “link is Sprint Dashboard”。
+• links[1] 的 url 为 data:application/pdf…，整链跳过，不朗读。
+
+================================================================================
+二、Electron 读信（逐字高亮 utterance = prefix + bodyText + readSuffix）
+================================================================================
+说明（见 EmailView handleReadThisEmail，且 ipcEmailData 来自本 JSON）：
+  • prefix / readSuffix 来自 buildReadAlongFromPipelineEmailData(ipcEmailData)
+  • bodyText 来自对 email_data.body 做 injectReadAlongMarkupFromPlainText 后的
+    utteranceText（与 iframe 内 .tts-word 对齐），内容与 pipeline 的 body 字符串一致，
+    含 “the content is …” 及换行，按词分块朗读。
+
+--- prefix（一句，段内用 “. ” 连接）---
+
+sender is jane.doe@example.com. subject is Technical Specification Update. sent on Sunday, May 3, 2026.
+
+--- bodyText（与 JSON 中 body 字段相同的一整段，作为分词朗读中间段；此处照抄原文）---
+
+the content is Hi Team,
+
+Please find the updated technical specifications for the upcoming sprint. I have included the detailed PDF with all the necessary architectural diagrams.
+
+You can also track our progress on the official Sprint Dashboard.
+
+Regards,
+Jane
+
+--- readSuffix（接在 bodyText 之后）---
+
+Attachments: attachment type is document and attachment is Sprint Specs, number of detected links is 2 and number of detected images is 0.
+
+Links: link is Sprint Dashboard.
+
+--- 拼成的一条 utteranceText（连续朗读时的完整字符串）---
+
+sender is jane.doe@example.com. subject is Technical Specification Update. sent on Sunday, May 3, 2026.the content is Hi Team,
+
+Please find the updated technical specifications for the upcoming sprint. I have included the detailed PDF with all the necessary architectural diagrams.
+
+You can also track our progress on the official Sprint Dashboard.
+
+Regards,
+Jane
+
+Attachments: attachment type is document and attachment is Sprint Specs, number of detected links is 2 and number of detected images is 0.
+
+Links: link is Sprint Dashboard.
+
+（注：prefix 与 body 之间在代码里无额外换行；若需可再改拼接格式。）
+
+--- 说明 ---
+• 逐字高亮仅覆盖中间 bodyText 对应 iframe 范围；prefix / suffix 无 .tts-word。
+• 链接跳过 data: 第二条；附件、链接段格式见上。
+
+================================================================================
+三、与 JSON 字段的对照（读了 / 没读）
+================================================================================
+读了：
+  sender, subject, date, body,
+  attachments[].spoken_name,
+  links 中有 https 的那条 → “link is Sprint Dashboard”（无 spoken_name 时的回退）
+
+没读：
+  uid,
+  file_type, original_name（附件仅 spoken_name 进 TTS；读信 UI 附件列表仍显示文件名）,
+  links[].url 全文（不朗读 URL 字符串）,
+  data: 那条 link 整项（语音侧跳过）,
+  images, number_of_detected_links, number_of_detected_images
+
+================================================================================
+文件结束
+================================================================================

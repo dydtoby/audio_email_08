@@ -1,0 +1,17 @@
+/html2text/_version.py
+
+*.py[co]
+*.bak
+build
+dist
+*.egg-info
+.idea
+.coverage
+.coverage.*
+coverage.xml
+env/
+.c9/
+.vscode
+.tox/
+htmlcov/
+.mypy_cache/

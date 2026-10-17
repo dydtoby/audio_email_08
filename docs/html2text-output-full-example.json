@@ -1,0 +1,61 @@
+﻿{
+  "uid": 20042,
+  "receiver": "评审组 board-review@example.com",
+  "sender": "财务部 finance.team08@example.com",
+  "subject": "FY2026 Q1 材料包：预算模型、董事会稿与运营月报（含链接与附件）",
+  "date": "2026-05-04",
+  "body": "各位好，\n\n请查收本季度材料。说明与下载入口如下。\n\n**相关链接（正文中也会出现为纯文本或尖括号形式）：**\n\n- 内部 Wiki 首页与 deep link\n- 状态页与带查询参数的长 URL\n- 联系人邮件\n\n**正文摘录：**\n\n请在周五前完成审阅。预算假设见附件；董事会幻灯片已根据上次纪要修订。\n\n> 提醒：请勿对外转发含 macro 的工作簿。\n\n核对项：\n\n* 附件哈希与清单一致\n* 链接可访问（需 VPN）\n* 图表与 pivot 刷新后再导出\n\n表格（示例）：\n\n场景 | 现金流影响\n---|---\n基准 | +2.1%\n压力 | -6.4%\n\n此致\nTeam08 财务组",
+  "attachments": [
+    {
+      "file_type": "pdf",
+      "original_name": "Monthly_OPS_review_January_2026_executive_summary.pdf",
+      "spoken_name": "attachment type is pdf and attachment is Monthly, number of detected links is 5 and number of detected images is 1"
+    },
+    {
+      "file_type": "spreadsheet",
+      "original_name": "2026-BOARD-PREP-Consolidated-Financial-Workbook-v4-with-audit-notes-and-management-letter-responses-and-supplementary-schedules-ALL-TABS.xlsx",
+      "spoken_name": "attachment type is spreadsheet and attachment is 2026 BOARD, number of detected links is 5 and number of detected images is 1"
+    },
+    {
+      "file_type": "presentation",
+      "original_name": "Stakeholder_Communication_Plan_Q1_Q2_delivery_timeline_milestones_dependencies_resources_v12_FINAL.pptx",
+      "spoken_name": "attachment type is presentation and attachment is Stakeholde, number of detected links is 5 and number of detected images is 1"
+    },
+    {
+      "file_type": "archive",
+      "original_name": "supporting_evidence_bundle_2026-05-04_invoices_contracts_redacted_checksums_sha256_manifest.zip",
+      "spoken_name": "attachment type is archive and attachment is supporting, number of detected links is 5 and number of detected images is 1"
+    }
+  ],
+  "links": [
+    {
+      "label": "Wiki：董事会材料索引",
+      "url": "https://intranet.example.com/wiki/display/BOARD/FY2026+Q1+Packet?spaceKey=FIN&pageId=88421&highlight=attachments"
+    },
+    {
+      "label": "mailto:审计对接人",
+      "url": "mailto:audit.liaison@example.com?subject=FY2026%20Q1%20Workbook%20v4&body=Please%20confirm%20macro%20settings."
+    },
+    {
+      "label": "https://status.example.com",
+      "url": "https://status.example.com/api/v1/incidents?component=finance-reports&from=2026-04-01&to=2026-05-04&include=timeline"
+    },
+    {
+      "label": "超长直链（无友好标题）",
+      "url": "https://cdn.example.com/files/public/download?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxlIjoiYnVkZ2V0X21vZGVsX3Y0Lnhtc3giLCJleHAiOjE3NDY0ODAwMDB9.signature_placeholder&filename=Consolidated_Financial_Workbook_v4.xlsx&disposition=attachment"
+    },
+    {
+      "label": "短链跳转",
+      "url": "https://go.example.com/board-prep-q1-2026?utm_source=email&utm_medium=internal&utm_campaign=fy26q1"
+    }
+  ],
+  "number_of_detected_links": 5,
+  "images": [
+    {
+      "label": "封面横幅图（内嵌）",
+      "src": "cid:banner-image-001@mailer.example.com",
+      "alt": "FY2026 Q1 Board Preparation Banner"
+    }
+  ],
+  "number_of_detected_images": 1
+}

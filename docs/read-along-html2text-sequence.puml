@@ -1,0 +1,46 @@
+@startuml read_along_html2text_sequence
+title Email read-along: HTML -> html2text -> Web Speech
+
+actor User
+participant "EmailView\n(renderer)" as EV
+participant "preload\nelectronAPI" as PRE
+participant "Electron main\nIPC" as MAIN
+participant "voicePipeline.js" as VP
+participant "Flask\nPOST /process-email" as Flask
+participant "EmailProcessingPipeline" as Pip
+participant "EmailTextExtractor" as Ext
+participant "html2text\nHTML2Text" as H2T
+participant "iframe\nsrcdoc" as IF
+participant "speechSynthesis" as SYN
+
+User -> EV : Read This Email
+EV -> EV : getBaseBodyHtmlForReadAlong()
+
+EV -> PRE : extractEmailFromHtml(html)
+PRE -> MAIN : voice:extract-email
+MAIN -> VP : processEmailHtml(html)
+VP -> Flask : JSON body
+Flask -> Pip : process_backend_payload
+Pip -> Ext : extract_email_data
+Ext -> Ext : locate body (BeautifulSoup)
+Ext -> H2T : handle(html fragment)
+H2T --> Ext : plain text + links/images
+Ext --> Pip
+Pip --> Flask : email_data
+Flask --> VP
+VP --> MAIN
+MAIN --> PRE
+PRE --> EV : email_data.body
+
+EV -> EV : injectReadAlongMarkupFromPlainText(body)
+EV -> IF : marked HTML (.tts-word)
+EV -> SYN : utteranceText + boundaries
+SYN --> EV : onboundary
+EV -> IF : applyWordHighlight
+
+note right of EV
+  Fallback:
+  injectReadAlongMarkup(raw HTML)
+end note
+
+@enduml

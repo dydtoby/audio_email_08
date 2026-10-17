@@ -1,0 +1,10 @@
+# Runtime output from Flask /process-email (regenerated each request)
+output_email.json
+src/output_email.json
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so

@@ -1,0 +1,537 @@
+{
+  "emails": [
+    {
+      "id": 1,
+      "fromName": "Sarah Johnson",
+      "fromEmail": "sarah.johnson@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Q4 Report Review - Action Required",
+      "preview": "Hi team, I've attached the latest Q4 financial report for you",
+      "body": "Hi Alex,\n\nI've attached the latest Q4 financial report for your review. Please pay close attention to the updated revenue forecast and the new hiring assumptions for next quarter.\n\nWe need final approval before Friday afternoon so I can include the numbers in the board packet.\n\nLet me know if you'd like me to summarize the key changes before the finance call.\n\nBest,\nSarah",
+      "date": "Mar 12, 2026, 9:40 AM",
+      "timeAgo": "2h ago",
+      "unread": true,
+      "starred": true,
+      "attachments": [
+        {
+          "name": "Q4_Financial_Report.pdf",
+          "size": "2.4 MB"
+        },
+        {
+          "name": "forecast_notes.xlsx",
+          "size": "860 KB"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fromName": "Daniel Lee",
+      "fromEmail": "daniel.lee@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Client Feedback from Yesterday's Demo",
+      "preview": "The client had a very positive reaction overall, with a few notes",
+      "body": "Hi Alex,\n\nThe client responded well to the new playback flow and especially liked the unread queue concept.\n\nTheir main request was better attachment handling and a more obvious way to start listening from the selected message.\n\nI think we should review the button placement before the next demo.\n\nThanks,\nDaniel",
+      "date": "Mar 12, 2026, 8:10 AM",
+      "timeAgo": "3h ago",
+      "unread": true,
+      "starred": false,
+      "attachments": []
+    },
+    {
+      "id": 3,
+      "fromName": "Nina Patel",
+      "fromEmail": "nina.patel@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Audio Engine Testing Notes",
+      "preview": "I finished another pass on the playback edge cases this morning",
+      "body": "Hi Alex,\n\nI finished another pass on playback edge cases this morning.\n\nWe still need to handle very long email bodies more gracefully, especially when the message contains multiple quoted replies.\n\nI also noticed a small delay after pause/resume that might be worth smoothing out.\n\nBest,\nNina",
+      "date": "Mar 11, 2026, 5:30 PM",
+      "timeAgo": "18h ago",
+      "unread": false,
+      "starred": true,
+      "attachments": [
+        {
+          "name": "tts_test_results.docx",
+          "size": "340 KB"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fromName": "Product Team",
+      "fromEmail": "product@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Planning Session for Inbox Filtering",
+      "preview": "We're scheduling a short working session tomorrow afternoon",
+      "body": "Hi Alex,\n\nWe're scheduling a short working session tomorrow afternoon to align on inbox filtering, unread prioritization, and starred messages.\n\nPlease send over any notes about the current desktop layout before then.\n\nThanks,\nProduct Team",
+      "date": "Mar 11, 2026, 3:15 PM",
+      "timeAgo": "22h ago",
+      "unread": false,
+      "starred": false,
+      "attachments": []
+    },
+    {
+      "id": 5,
+      "fromName": "Sarah Johnson",
+      "fromEmail": "sarah.johnson@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Updated Board Packet",
+      "preview": "Sending the revised version with the corrected summary slide",
+      "body": "Hi Alex,\n\nSending the revised board packet with the corrected summary slide and updated appendix.\n\nPlease ignore the earlier version.\n\nBest,\nSarah",
+      "date": "Mar 10, 2026, 1:05 PM",
+      "timeAgo": "2d ago",
+      "unread": true,
+      "starred": true,
+      "attachments": [
+        {
+          "name": "Board_Packet_v2.pdf",
+          "size": "4.1 MB"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "fromName": "Operations Team",
+      "fromEmail": "ops@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Weekly Inbox Metrics",
+      "preview": "Sharing this week's usage snapshot for the desktop prototype",
+      "body": "Hi Alex,\n\nSharing this week's usage snapshot for the desktop prototype. Unread playback engagement is up, but users are still taking longer than expected to find drafts and sent mail.\n\nCould you take a look at the folder labels before Thursday's review?\n\nThanks,\nOperations Team",
+      "date": "Mar 10, 2026, 10:20 AM",
+      "timeAgo": "2d ago",
+      "unread": false,
+      "starred": false,
+      "attachments": []
+    },
+    {
+      "id": 7,
+      "fromName": "Maya Collins",
+      "fromEmail": "maya.collins@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Accessibility Feedback Roundup",
+      "preview": "A few participants asked for clearer voice and speed labels",
+      "body": "Hi Alex,\n\nA few participants asked for clearer voice and speed labels in the audio controls. They also wanted the read/unread difference to stand out more strongly in the list.\n\nI've attached my notes from the session.\n\nBest,\nMaya",
+      "date": "Mar 10, 2026, 9:05 AM",
+      "timeAgo": "2d ago",
+      "unread": true,
+      "starred": true,
+      "attachments": [
+        {
+          "name": "accessibility_roundup.pdf",
+          "size": "520 KB"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "fromName": "Design Review",
+      "fromEmail": "design@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Header and Sidebar Polish",
+      "preview": "The team likes the overall direction but wants the top bar tightened up",
+      "body": "Hi Alex,\n\nThe team likes the overall direction but wants the top bar tightened up and the sidebar spacing to feel a bit more deliberate.\n\nCould you also explore whether the compose panel needs a stronger contrast line at the top?\n\nThanks,\nDesign Review",
+      "date": "Mar 9, 2026, 6:35 PM",
+      "timeAgo": "3d ago",
+      "unread": false,
+      "starred": false,
+      "attachments": []
+    },
+    {
+      "id": 9,
+      "fromName": "Priya Shah",
+      "fromEmail": "priya.shah@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Questions About Draft Sync",
+      "preview": "Do we want local-only drafts in the demo or visible placeholders for remote sync?",
+      "body": "Hi Alex,\n\nDo we want local-only drafts in the demo, or should we present them as placeholders for eventual remote sync? I want to make sure the copy and testing notes line up with what the frontend actually does today.\n\nBest,\nPriya",
+      "date": "Mar 9, 2026, 3:42 PM",
+      "timeAgo": "3d ago",
+      "unread": true,
+      "starred": false,
+      "attachments": []
+    },
+    {
+      "id": 10,
+      "fromName": "QA Inbox",
+      "fromEmail": "qa@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Regression Sweep Results",
+      "preview": "Most inbox interactions are stable, but pagination still needs exercise",
+      "body": "Hi Alex,\n\nMost inbox interactions are stable, but pagination still needs exercise with a larger fixture set. We also saw a few minor layout jumps when the reader body switched from short to very long content.\n\nRegards,\nQA Inbox",
+      "date": "Mar 9, 2026, 11:17 AM",
+      "timeAgo": "3d ago",
+      "unread": true,
+      "starred": true,
+      "attachments": [
+        {
+          "name": "regression_sweep.csv",
+          "size": "190 KB"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "fromName": "Tom Alvarez",
+      "fromEmail": "tom.alvarez@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Scheduling the Audio Demo",
+      "preview": "Can you make the unread queue the centerpiece of Friday's walkthrough?",
+      "body": "Hi Alex,\n\nCan you make the unread queue the centerpiece of Friday's walkthrough? That's the flow the stakeholders keep gravitating toward, and it'd be good to show how quickly users can move from browsing to listening.\n\nCheers,\nTom",
+      "date": "Mar 8, 2026, 4:28 PM",
+      "timeAgo": "4d ago",
+      "unread": false,
+      "starred": false,
+      "attachments": []
+    },
+    {
+      "id": 12,
+      "fromName": "Support Desk",
+      "fromEmail": "support@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Customer Quote for Presentation",
+      "preview": "One tester said the unread list finally felt manageable with audio controls",
+      "body": "Hi Alex,\n\nOne tester said the unread list finally felt manageable once the audio controls were visible and the selected email was clearly framed.\n\nThat quote might be useful in the presentation deck.\n\nBest,\nSupport Desk",
+      "date": "Mar 8, 2026, 1:54 PM",
+      "timeAgo": "4d ago",
+      "unread": false,
+      "starred": true,
+      "attachments": []
+    },
+    {
+      "id": 13,
+      "fromName": "Engineering Notes",
+      "fromEmail": "engineering@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Backend Contract Ideas",
+      "preview": "We've sketched a possible payload for message bodies and flags",
+      "body": "Hi Alex,\n\nWe've sketched a possible payload for message bodies and flags that should cover unread, starred, and attachment state. When the drafts work starts on the backend, we can probably extend the same model with only a few additional fields.\n\nThanks,\nEngineering Notes",
+      "date": "Mar 8, 2026, 9:21 AM",
+      "timeAgo": "4d ago",
+      "unread": true,
+      "starred": false,
+      "attachments": [
+        {
+          "name": "mail_contract.md",
+          "size": "34 KB"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "fromName": "Helen Brooks",
+      "fromEmail": "helen.brooks@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Need a cleaner drafts empty state",
+      "preview": "The current message is fine, but we might want a stronger prompt to start composing",
+      "body": "Hi Alex,\n\nThe current drafts empty state is fine, but we might want a stronger prompt to start composing once draft sync is in place.\n\nMaybe something a bit more actionable than a plain informational line.\n\nHelen",
+      "date": "Mar 7, 2026, 5:40 PM",
+      "timeAgo": "5d ago",
+      "unread": false,
+      "starred": false,
+      "attachments": []
+    },
+    {
+      "id": 15,
+      "fromName": "Research Team",
+      "fromEmail": "research@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Interview Summary 03/07",
+      "preview": "Participants noticed unread styling right away, which is a good sign",
+      "body": "Hi Alex,\n\nParticipants noticed the unread styling right away, which is a good sign. The main confusion point was whether pagination was real or decorative, so the larger demo data set should help validate that quickly.\n\nRegards,\nResearch Team",
+      "date": "Mar 7, 2026, 2:03 PM",
+      "timeAgo": "5d ago",
+      "unread": true,
+      "starred": true,
+      "attachments": [
+        {
+          "name": "interview_summary.txt",
+          "size": "18 KB"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "fromName": "Client Success",
+      "fromEmail": "clients@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Demo Prep Checklist",
+      "preview": "Please remember to show replying, forwarding, and draft editing in the next demo",
+      "body": "Hi Alex,\n\nPlease remember to show replying, forwarding, and draft editing in the next demo. Those are the three actions the client asked about most directly in the follow-up notes.\n\nThanks,\nClient Success",
+      "date": "Mar 7, 2026, 11:08 AM",
+      "timeAgo": "5d ago",
+      "unread": false,
+      "starred": false,
+      "attachments": []
+    },
+    {
+      "id": 17,
+      "fromName": "Nina Patel",
+      "fromEmail": "nina.patel@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Long-form Email Rendering Test",
+      "preview": "I generated a much longer body so we can check reader overflow behavior",
+      "body": "Hi Alex,\n\nI generated a much longer body so we can check reader overflow behavior and see how well the audio controls coexist with scroll-heavy content.\n\nThe panel seems stable so far, but I'd still like to run through a few more edge cases once pagination is fully wired.\n\nBest,\nNina",
+      "date": "Mar 6, 2026, 6:14 PM",
+      "timeAgo": "6d ago",
+      "unread": false,
+      "starred": true,
+      "attachments": []
+    },
+    {
+      "id": 18,
+      "fromName": "Legal",
+      "fromEmail": "legal@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Review of Privacy Copy",
+      "preview": "Please avoid claiming draft sync if drafts are still stored only in the app",
+      "body": "Hi Alex,\n\nPlease avoid claiming draft sync in any customer-facing copy if drafts are still stored only in the app. Once backend persistence is available, we can revisit the wording.\n\nThanks,\nLegal",
+      "date": "Mar 6, 2026, 2:44 PM",
+      "timeAgo": "6d ago",
+      "unread": true,
+      "starred": false,
+      "attachments": []
+    },
+    {
+      "id": 19,
+      "fromName": "UX Workshop",
+      "fromEmail": "ux@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Folder Naming Suggestions",
+      "preview": "Several people preferred 'Sent' over 'Send' in the left nav",
+      "body": "Hi Alex,\n\nSeveral people preferred 'Sent' over 'Send' in the left nav because it matched their existing email habits. We should keep an eye on other labels that might still feel unfamiliar.\n\nBest,\nUX Workshop",
+      "date": "Mar 6, 2026, 10:12 AM",
+      "timeAgo": "6d ago",
+      "unread": false,
+      "starred": false,
+      "attachments": []
+    },
+    {
+      "id": 20,
+      "fromName": "Product Team",
+      "fromEmail": "product@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Backlog Refinement Notes",
+      "preview": "We moved pagination and draft sync higher up after the last feedback session",
+      "body": "Hi Alex,\n\nWe moved pagination and draft sync higher up after the last feedback session. Both came up enough times that they now feel like critical parts of the core browsing experience rather than extras.\n\nThanks,\nProduct Team",
+      "date": "Mar 5, 2026, 4:55 PM",
+      "timeAgo": "1w ago",
+      "unread": true,
+      "starred": true,
+      "attachments": []
+    },
+    {
+      "id": 21,
+      "fromName": "Maya Collins",
+      "fromEmail": "maya.collins@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Quick Note on Empty States",
+      "preview": "The drafts empty state is fine, but the sent folder might need one too",
+      "body": "Hi Alex,\n\nThe drafts empty state is fine, but the sent folder might need one too once real sending is demonstrated more often in reviews.\n\nMaya",
+      "date": "Mar 5, 2026, 1:27 PM",
+      "timeAgo": "1w ago",
+      "unread": false,
+      "starred": false,
+      "attachments": []
+    },
+    {
+      "id": 22,
+      "fromName": "Daniel Lee",
+      "fromEmail": "daniel.lee@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Follow-up on Read Selected",
+      "preview": "Once pagination is working, we should test selection across pages",
+      "body": "Hi Alex,\n\nOnce pagination is working, we should test selection across pages to decide whether bulk actions stay page-local or persist across the whole filtered set.\n\nThanks,\nDaniel",
+      "date": "Mar 5, 2026, 9:33 AM",
+      "timeAgo": "1w ago",
+      "unread": true,
+      "starred": false,
+      "attachments": []
+    },
+    {
+      "id": 23,
+      "fromName": "Automation Bot",
+      "fromEmail": "bot@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Nightly UI Snapshot Report",
+      "preview": "No major visual regressions detected in the latest desktop run",
+      "body": "Hi Alex,\n\nNo major visual regressions were detected in the latest desktop run. The only note was that the mail list needs enough fixture content to make pagination and scroll boundaries easier to test.\n\nAutomation Bot",
+      "date": "Mar 4, 2026, 10:01 PM",
+      "timeAgo": "1w ago",
+      "unread": false,
+      "starred": true,
+      "attachments": [
+        {
+          "name": "snapshot_report.html",
+          "size": "88 KB"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "fromName": "Sarah Johnson",
+      "fromEmail": "sarah.johnson@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Finance Call Agenda",
+      "preview": "Adding the talking points we want covered before the board packet review",
+      "body": "Hi Alex,\n\nAdding the talking points we want covered before the board packet review, including the revised revenue forecast and the staffing assumptions.\n\nBest,\nSarah",
+      "date": "Mar 4, 2026, 3:18 PM",
+      "timeAgo": "1w ago",
+      "unread": false,
+      "starred": false,
+      "attachments": []
+    },
+    {
+      "id": 25,
+      "fromName": "Nina Patel",
+      "fromEmail": "nina.patel@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Playback Timing Experiment",
+      "preview": "I tried shortening the pause between paragraphs and the flow felt smoother",
+      "body": "Hi Alex,\n\nI tried shortening the pause between paragraphs and the flow felt smoother, especially for shorter operational emails. That might be a good default once backend voice preferences settle down.\n\nBest,\nNina",
+      "date": "Mar 4, 2026, 11:22 AM",
+      "timeAgo": "1w ago",
+      "unread": true,
+      "starred": true,
+      "attachments": []
+    },
+    {
+      "id": 26,
+      "fromName": "Roadmap",
+      "fromEmail": "roadmap@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Milestone Check-in",
+      "preview": "Draft handling, real pagination, and improved compose actions are all on track",
+      "body": "Hi Alex,\n\nDraft handling, real pagination, and improved compose actions are all on track from a frontend perspective. Once the backend pieces land, we should have a fairly clear integration path for each of them.\n\nRoadmap Team",
+      "date": "Mar 3, 2026, 5:46 PM",
+      "timeAgo": "1w ago",
+      "unread": false,
+      "starred": false,
+      "attachments": []
+    },
+    {
+      "id": 27,
+      "fromName": "Archive Review",
+      "fromEmail": "archive@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Historic Email Sample Set",
+      "preview": "We've collected a few extra sample messages in case the demo needs more variety",
+      "body": "Hi Alex,\n\nWe've collected a few extra sample messages in case the demo needs more variety across senders, dates, and attachment states.\n\nLet me know if you'd like another batch added.\n\nThanks,\nArchive Review",
+      "date": "Mar 3, 2026, 1:10 PM",
+      "timeAgo": "1w ago",
+      "unread": false,
+      "starred": false,
+      "attachments": [
+        {
+          "name": "sample_set.zip",
+          "size": "1.1 MB"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "fromName": "Tom Alvarez",
+      "fromEmail": "tom.alvarez@company.com",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Last-minute Question for Friday",
+      "preview": "Do you want me to cover the audio controls or focus entirely on the inbox list?",
+      "body": "Hi Alex,\n\nDo you want me to cover the audio controls or focus entirely on the inbox list during Friday's walkthrough? Either is fine, but I want to avoid crowding the first ten minutes.\n\nTom",
+      "date": "Mar 3, 2026, 9:04 AM",
+      "timeAgo": "1w ago",
+      "unread": true,
+      "starred": false,
+      "attachments": []
+    }
+  ],
+  "drafts": [
+    {
+      "id": "draft-demo-1",
+      "fromName": "Draft",
+      "fromEmail": "demo@audioemailer.local",
+      "to": [
+        "alex@audioemailer.com"
+      ],
+      "subject": "Podcast episode follow-up",
+      "preview": "Hi Alex, here are the notes I wanted to send after our audio review.",
+      "body": "Hi Alex,\n\nHere are the notes I wanted to send after our audio review. I still need to add the attachment list and tighten up the second paragraph before sending this on.\n\nBest,\nFreddie",
+      "date": "Draft",
+      "timeAgo": "Draft",
+      "unread": false,
+      "starred": false,
+      "attachments": [],
+      "isDraft": true,
+      "scopeKey": "demo@audioemailer.local"
+    },
+    {
+      "id": "draft-demo-2",
+      "fromName": "Draft",
+      "fromEmail": "demo@audioemailer.local",
+      "to": [],
+      "subject": "",
+      "preview": "Draft saved with no message content yet.",
+      "body": "Need to summarise the unread-email playback idea and send it to the team.",
+      "date": "Draft",
+      "timeAgo": "Draft",
+      "unread": false,
+      "starred": false,
+      "attachments": [],
+      "isDraft": true,
+      "scopeKey": "demo@audioemailer.local"
+    }
+  ]
+}

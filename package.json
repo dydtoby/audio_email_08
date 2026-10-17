@@ -1,0 +1,138 @@
+{
+  "name": "audio_emailer",
+  "version": "1.0.0",
+  "description": "An email client that can read out your emails",
+  "keywords": [
+    "audio",
+    "emailer",
+    "client"
+  ],
+  "homepage": "https://git.shefcompsci.org.uk/com6103-2025-26/team08/project",
+  "repository": {
+    "type": "git",
+    "url": "https://git.shefcompsci.org.uk/com6103-2025-26/team08/project.git"
+  },
+  "license": "ISC",
+  "author": "Team 8 members (2025/2026)",
+  "type": "commonjs",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "concurrently \"npm:dev:vite\" \"npm:dev:electron\"",
+    "dev": "concurrently \"npm:dev:vite\" \"npm:dev:electron\"",
+    "dev:vite": "vite --port 5174 --strictPort",
+    "dev:electron": "wait-on http://127.0.0.1:5174 && cross-env NODE_ENV=development electron .",
+    "build": "vite build",
+    "build:mac": "npm run build && electron-builder --mac --publish never",
+    "build:text-extraction": "node scripts/build_text_extraction_exe.cjs",
+    "build:win": "npm run build && npm run build:text-extraction && electron-builder --win --publish never",
+    "build:linux": "npm run build && electron-builder --linux --publish never",
+    "build:linux:deb": "npm run build && electron-builder --linux deb --publish never",
+    "build:all:win": "npm run build && electron-builder --publish never --win --linux",
+    "build:all": "npm run build && electron-builder --publish never --win --linux --mac",
+    "dist": "npm run build && electron-builder --publish never",
+    "test": "jest",
+    "test:email-connect": "node test/audio/email_connect/run_email_connect_test.js",
+    "test:audio": "npm run test:email-connect",
+    "test:smoke": "node test/run_smoke_tests.js",
+    "test:mail": "node test/email/run_mail_tests.js",
+    "test:google-oauth": "node test/googleAuthTest.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "electron-store": "^11.0.2",
+    "googleapis": "^140.0.0",
+    "imapflow": "^1.0.168",
+    "mailparser": "^3.9.4",
+    "node-schedule": "^2.1.1",
+    "nodemailer": "^8.0.3",
+    "open": "^9.0.0",
+    "react-router-dom": "^7.13.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node-schedule": "^2.1.8",
+    "@vitejs/plugin-react": "^6.0.1",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "electron": "^40.8.0",
+    "electron-builder": "^26.8.1",
+    "jest": "^30.3.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.0",
+    "wait-on": "^9.0.4"
+  },
+  "build": {
+    "appId": "uk.org.shefcompsci.audio-emailer",
+    "productName": "Audio Emailer",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/renderer/**/*",
+      "src/main/**/*.js",
+      "src/main/preload.js",
+      "package.json",
+      "devPort.cjs",
+      "!**/*.test.*",
+      "!**/.DS_Store",
+      "!**/__pycache__",
+      ".env"
+    ],
+    "extraResources": [
+      {
+        "from": "build/text_extraction/text_extraction_server.exe",
+        "to": "text_extraction/text_extraction_server.exe"
+      },
+      {
+        "from": "src/text_extraction/src",
+        "to": "text_extraction/src",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "mac": {
+      "identity": null,
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "category": "public.app-category.utilities"
+    },
+    "dmg": {
+      "sign": false
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false
+    },
+    "linux": {
+      "target": [
+        "tar.gz"
+      ],
+      "category": "Utility",
+      "maintainer": "Team08 <team08@sheffield.ac.uk>"
+    }
+  }
+}

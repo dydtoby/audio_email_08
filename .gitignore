@@ -1,0 +1,13 @@
+node_modules
+.env*
+!.env.example
+Icon\r
+**/.DS_Store
+**.DS_Store
+dist
+release
+/data
+build
+release
+__pycache__
+/renderer
